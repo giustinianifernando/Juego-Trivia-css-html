@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+html {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        url(fondomadera.jpg) no-repeat;
+    background-size: cover;
+}
+
+body {
+    box-sizing: border-box;
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    letter-spacing: 2px;
+    font-family: monospace;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.2)),
+        url(fondogris.jpeg) no-repeat;
+    background-size: cover;
+}
+
+article {
+    width: 70%;
+}
+
+.contenedor-preguntas {
+    max-width: 1200px;
+    margin: auto;
+    border: 0 0 10px rgba(0, 0, 0, .5);
+    width: 100%;
+}
+
+.contenedor-preguntas h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.contenedor-preguntas ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-preguntas li {
+    font-size: 1.3em;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 1em;
+}
+
+.respuesta {
+    cursor: pointer;
+}
+
+.animacion-correcto,
+.animacion-incorrecto {
+    display: none;
+    transform: scale(1);
+    font-size: 1em;
+    font-weight: bold;
+
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    width: 100%;
+    font-weight: bold;
+}
+
+ul input:checked+label {
+    background-color: rgba(26, 26, 26, 0.503);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+#correcto:checked~.animacion-correcto {
+    display: block;
+    color: green;
+    animation: respuesta 1s;
+
+}
+
+#incorrecto1:checked~.animacion-incorrecto {
+    display: block;
+    color: red;
+    animation: respuesta 1s;
+}
+
+#incorrecto2:checked~.animacion-incorrecto {
+    display: block;
+
+    color: red;
+    animation: respuesta 1s;
+}
+
+#incorrecto3:checked~.animacion-incorrecto {
+    display: block;
+    color: red;
+    animation: respuesta 1s;
+}
+
+@keyframes respuesta {
+
+    0% {
+        transform: scale(0) rotate(360deg);
+    }
+}
+
+.siguiente {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 0.8em;
+}
+
+.adelante {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.adelante a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.adelante a:active {
+    font-weight: bold;
+    text-decoration: none;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.puntaje {
+    font-size: 0.5em;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.701);
+    display: none;
+    transform: scale(1);
+}
+
+#correcto:checked~.puntaje {
+    display: block;
+    animation: puntaje 1.5s;
+}
+
+#incorrecto1:checked~.puntaje {
+    display: block;
+    animation: puntaje 1.5s;
+}
+
+#incorrecto2:checked~.puntaje {
+    display: block;
+    animation: puntaje 1.5s;
+}
+
+#incorrecto3:checked~.puntaje {
+    display: block;
+    animation: puntaje 1.5s;
+}
+
+@keyframes puntaje {
+
+    0% {
+        transform: scale(0)
+    }
+}
+
+@media (max-width: 1060px) {
+    .contenedor-preguntas li {
+        font-size: 1em;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        gap: 0.8em;
+    }
+
+    .animacion-correcto,
+    .animacion-incorrecto {
+        display: none;
+        font-size: 1em;
+    }
+
+    .contenedor-preguntas h2 {
+        font-size: 1.5em;
+    }
+
+    .puntaje {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 600px) {
+
+    body {
+        max-width: 70vw;
+
+    }
+
+    .contenedor-preguntas li {
+        font-size: 1em;
+    }
+
+    .animacion-correcto,
+    .animacion-incorrecto {
+        display: none;
+        font-size: 1em;
+    }
+
+    .contenedor-preguntas h2 {
+        font-size: 1.1em;
+    }
+
+    .siguiente {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.5em;
+    }
+
+    .contenedor-preguntas li {
+        gap: 5px;
+    }
+}

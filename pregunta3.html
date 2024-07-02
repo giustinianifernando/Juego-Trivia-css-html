@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="fondomadera.jpg" as="image">
+    <link rel="preload" href="fondogris.jpeg" as="image">
+
+</head>
+
+<body>
+
+    <article>
+        <div class="contenedor-preguntas" id="pregunta-1">
+            <h2>¿Quién pintó la Mona Lisa?</h2>
+            <ul>
+                <li>
+                    <input type="radio" id="correcto" name="pregunta1">
+                    <label class="respuesta" for="correcto">Pablo Picasso</label>
+                    <span class="animacion-correcto">Correcto!</span>
+                    <span class="puntaje">+2 puntos</span>
+                </li>
+                <li>
+                    <input type="radio" id="incorrecto1" name="pregunta1">
+                    <label class="respuesta" for="incorrecto1">Vincent van Gogh</label>
+                    <span class="animacion-incorrecto">Incorrecto!</span>
+                    <span class="puntaje">+0 puntos</span>
+                </li>
+                <li>
+                    <input type="radio" id="incorrecto2" name="pregunta1">
+                    <label class="respuesta" for="incorrecto2">Claude Monet</label>
+                    <span class="animacion-incorrecto">Incorrecto!</span>
+                    <span class="puntaje">+0 puntos</span>
+                </li>
+                <li>
+                    <input type="radio" id="incorrecto3" name="pregunta1">
+                    <label class="respuesta" for="incorrecto3">Leonardo da Vinci</label>
+                    <span class="animacion-incorrecto">Incorrecto!</span>
+                    <span class="puntaje">+0 puntos</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="siguiente">
+            <div class="adelante">
+                <a href="pregunta2.html"><ion-icon style="color: #ddd;" name="caret-back-outline"></ion-icon>Atras</a>
+            </div>
+            <div class="adelante">
+                <a href="pregunta4.html">Siguiente<ion-icon style="color: #ddd;"
+                        name="caret-forward-outline"></ion-icon></a>
+            </div>
+        </div>
+
+
+        </div>
+    </article>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
