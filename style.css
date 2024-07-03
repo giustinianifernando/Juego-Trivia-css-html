@@ -222,12 +222,13 @@ ul input:checked+label {
 @media (max-width: 600px) {
 
     body {
-        max-width: 70vw;
+        width: 80vw;
 
     }
 
     .contenedor-preguntas li {
         font-size: 1em;
+        gap: 5px;
     }
 
     .animacion-correcto,
@@ -246,7 +247,7 @@ ul input:checked+label {
         font-size: 0.5em;
     }
 
-    .contenedor-preguntas li {
-        gap: 5px;
+    article {
+        width: 70vw;
     }
 }
